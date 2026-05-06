@@ -1,2 +1,8 @@
-# Yourssu-Incubating
-Yourssu.
+# Calculator 
+
+첫 번째 과제인 계산기를 제작합니다.
+
+> 현재 주요 기능
+```
+사칙연산(더하기, 빼기, 곱하기, 나누기)
+```
