@@ -45,17 +45,22 @@ class ViewController: UIViewController {
         let num2 = Double(secondNum.text!) ?? 0.0
         
         var result = 0.0
+        var operation: String = ""
         
         switch sender.configuration?.title {
         case "더하기":
             result = num1 + num2
+            operation = "+"
         case "빼기":
             result = num1 - num2
+            operation = "-"
         case "곱하기":
             result = num1 * num2
+            operation = "*"
         case "나누기":
             if num2 != 0 {
                 result = num1 / num2
+                operation = "/"
             } else {
                 outputBox.text = "0으로 나눌 수 없습니다"
                 return
@@ -63,7 +68,7 @@ class ViewController: UIViewController {
         default:
             break
         }
-        outputBox.text = "결과: " + String(format: "%g", result)
+        outputBox.text = "\(String(format: "%g", num1)) \(operation) \(String(format: "%g", num2)) = \(String(format: "%g", result))"
     }
 }
 
